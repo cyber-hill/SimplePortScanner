@@ -1,5 +1,5 @@
 # -*- coding:utf -8 -*-
-import socket
+import socket,os
 def fanc1():
     print("~"*50)
     host = input("[+] " + "Host --> ")
@@ -45,6 +45,8 @@ def fanc2():
             file = open("result.txt", "a")
             file.write("Port -- "+ str(i) + " -- [OPEN]\n")
             file.close()
+    cvd = os.getcwd()
+    print('The result was saved in ' + cvd + r'\result.txt')
     # for ports in list:
     #     print(ports)
 
@@ -77,6 +79,8 @@ def fanc3():
                     file = open("result.txt", "a")
                     file.write("Port -- " + str(i) + " -- [OPEN]\n")
                     file.close()
+            cvd=os.getcwd()
+            print('The result was saved in '+cvd + r'\result.txt')
         elif ',' in ports:
             b = ports.split(',',1)
             for num in b:
@@ -99,7 +103,8 @@ def fanc3():
                     file = open("result.txt", "a")
                     file.write("Port -- " + str(i) + " -- [OPEN]\n")
                     file.close()
-
+            cvd = os.getcwd()
+            print('The result was saved in '+cvd + r'\result.txt')
 
         else:
             print("Error!")
